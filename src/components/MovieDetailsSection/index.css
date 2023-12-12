@@ -1,0 +1,58 @@
+.banner-img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.poster-img {
+  width: 40%;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.movie-details-container {
+  display: flex;
+  background-color: gray;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: 700;
+  display: inline;
+}
+
+.genre-container {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.each-genre {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 650px) {
+  .movie-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 8px;
+    color: #fff;
+  }
+  .poster-img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+}

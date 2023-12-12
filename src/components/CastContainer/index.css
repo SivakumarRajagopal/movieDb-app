@@ -1,0 +1,9 @@
+.cast-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: auto;
+}

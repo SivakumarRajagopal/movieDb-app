@@ -1,0 +1,28 @@
+.cast-card {
+  width: 230px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 10px 5px;
+}
+
+.cast-img {
+  width: 200px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.cast-card-details {
+  width: 90%;
+  margin: auto;
+}
+
+.character-name {
+  font-weight: 700;
+}
+
+.original-name {
+  font-weight: 600;
+}

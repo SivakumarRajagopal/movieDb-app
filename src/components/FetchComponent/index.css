@@ -1,0 +1,9 @@
+.page-container {
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+}
+
+.page-title {
+  text-align: center;
+}
