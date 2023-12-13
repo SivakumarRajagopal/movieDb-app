@@ -1,48 +1,79 @@
-import {useState} from 'react'
+// import {useState} from 'react'
 
-import {MdMenu} from 'react-icons/md'
-import {RiCloseLine} from 'react-icons/ri'
+// import {MdMenu} from 'react-icons/md'
+// import {RiCloseLine} from 'react-icons/ri'
 
 import {Link} from 'react-router-dom'
 
 import './index.css'
 
-const Header = () => {
-  const [showMobileMenu, setMenu] = useState(false)
-
-  return (
-    <nav className="nav-header">
-      <div className="nav-content">
-        <Link to="/" className="title-home-link">
-          <h1 className="website-title">movieDB</h1>
+const Header = () => (
+  <nav className="nav-header">
+    <div className="nav-content">
+      <Link to="/" className="title-home-link">
+        <h1 className="website-title">movieDB</h1>
+      </Link>
+      <ul className="nav-menu">
+        <Link to="/" className="nav-link">
+          <li>
+            <button type="button" className="nav-btn">
+              Popular
+            </button>
+          </li>
         </Link>
-        <ul className="nav-menu">
-          <Link to="/" className="nav-link">
-            <li>
-              <button type="button" className="nav-btn">
-                Popular
-              </button>
-            </li>
-          </Link>
-          <Link to="/top-rated" className="nav-link">
-            <li>
-              <button type="button" className="nav-btn">
-                TopRated
-              </button>
-            </li>
-          </Link>
-          <Link to="/upcoming" className="nav-link">
-            <li>
-              <button type="button" className="nav-btn">
-                Upcoming
-              </button>
-            </li>
-          </Link>
-        </ul>
-      </div>
+        <Link to="/top-rated" className="nav-link">
+          <li>
+            <button type="button" className="nav-btn">
+              TopRated
+            </button>
+          </li>
+        </Link>
+        <Link to="/upcoming" className="nav-link">
+          <li>
+            <button type="button" className="nav-btn">
+              Upcoming
+            </button>
+          </li>
+        </Link>
+      </ul>
+    </div>
+  </nav>
+)
 
-      {/* Mobile menu bar */}
-      <div className="mobile-nav-content">
+//   const [showMobileMenu, setMenu] = useState(false)
+
+//   return (
+//     <nav className="nav-header">
+//       <div className="nav-content">
+//         <Link to="/" className="title-home-link">
+//           <h1 className="website-title">movieDB</h1>
+//         </Link>
+//         <ul className="nav-menu">
+//           <Link to="/" className="nav-link">
+//             <li>
+//               <button type="button" className="nav-btn">
+//                 Popular
+//               </button>
+//             </li>
+//           </Link>
+//           <Link to="/top-rated" className="nav-link">
+//             <li>
+//               <button type="button" className="nav-btn">
+//                 TopRated
+//               </button>
+//             </li>
+//           </Link>
+//           <Link to="/upcoming" className="nav-link">
+//             <li>
+//               <button type="button" className="nav-btn">
+//                 Upcoming
+//               </button>
+//             </li>
+//           </Link>
+//         </ul>
+//       </div>
+
+/* <div className="mobile-nav-content">
         <Link to="/" className="title-home-link">
           <h1 className="website-title">movieDB</h1>
         </Link>
@@ -76,9 +107,6 @@ const Header = () => {
             </Link>
           </ul>
         )}
-      </div>
-    </nav>
-  )
-}
+      </div> */
 
 export default Header

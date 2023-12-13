@@ -57,7 +57,7 @@
   border-bottom: 1px solid #ffffff;
 }
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   .nav-content {
     display: none;
   }
@@ -75,4 +75,4 @@
   .mobile-nav-content {
     display: none;
   }
-}
+} */
