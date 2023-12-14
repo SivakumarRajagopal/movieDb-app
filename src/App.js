@@ -5,14 +5,14 @@ import Header from './components/Header'
 import TopRated from './components/TopRated'
 import Upcoming from './components/Upcoming'
 import SingleMoviePage from './components/SingleMoviePage'
-import SearchBar from './components/SearchBar'
+// import SearchBar from './components/SearchBar'
 import SearchContents from './components/SearchContents'
 
 // write your code here
 const App = () => (
   <>
     <Header />
-    <SearchBar />
+    {/* <SearchBar /> */}
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/top-rated" component={TopRated} />

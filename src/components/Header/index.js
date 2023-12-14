@@ -4,15 +4,17 @@
 // import {RiCloseLine} from 'react-icons/ri'
 
 import {Link} from 'react-router-dom'
+import SearchBar from '../SearchBar'
 
 import './index.css'
 
 const Header = () => (
   <nav className="nav-header">
     <div className="nav-content">
-      <Link to="/" className="title-home-link">
-        <h1 className="website-title">movieDB</h1>
-      </Link>
+      {/* <Link to="/" className="title-home-link"> */}
+      <h1 className="website-title">movieDB</h1>
+      {/* </Link> */}
+      <SearchBar />
       <ul className="nav-menu">
         <Link to="/" className="nav-link">
           <li>
