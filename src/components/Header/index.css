@@ -76,3 +76,15 @@
     display: none;
   }
 } */
+
+.menu-web {
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-heading {
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #ffffff;
+}

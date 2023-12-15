@@ -15,6 +15,17 @@ const Header = () => (
       <h1 className="website-title">movieDB</h1>
       {/* </Link> */}
       <SearchBar />
+      {/* <div className="menu-web">
+        <Link to="/" className="nav-link">
+          <h6 className="nav-heading">Popular</h6>
+        </Link>
+        <Link to="/top-rated" className="nav-link">
+          <h6 className="nav-heading">Top Rated</h6>
+        </Link>
+        <Link to="/upcoming" className="nav-link">
+          <h6 className="nav-heading">Upcoming</h6>
+        </Link>
+      </div> */}
       <ul className="nav-menu">
         <Link to="/" className="nav-link">
           <li>
@@ -26,7 +37,7 @@ const Header = () => (
         <Link to="/top-rated" className="nav-link">
           <li>
             <button type="button" className="nav-btn">
-              TopRated
+              Top Rated
             </button>
           </li>
         </Link>

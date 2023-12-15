@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
-import {FaSearch} from 'react-icons/fa'
+
 import './index.css'
 
 const SearchBar = () => {
@@ -16,7 +16,6 @@ const SearchBar = () => {
           value={searchInput}
           onChange={e => setSearchInput(e.target.value.toLowerCase())}
         />
-        <FaSearch className="search-icon" />
       </div>
       <Link to={`/search/${searchInput}`} className="search-link">
         <button type="button" className="search-btn">
