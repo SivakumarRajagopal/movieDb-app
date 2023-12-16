@@ -12,7 +12,7 @@ const EachCard = props => {
     <li className="cardItem">
       <img src={posterImgUrl} alt={title} className="card-img" />
       <div className="card-details">
-        <p className="title">{title}</p>
+        <h1 className="title">{title}</h1>
         <p className="rating">{voteAverage}</p>
       </div>
       <Link to={`/movie/${id}`} className="link-item">

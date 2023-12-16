@@ -10,7 +10,7 @@ const SearchBar = () => {
     <div className="search-bar">
       <div className="input-wrapper">
         <input
-          type="search"
+          type="textbox"
           placeholder="Type to search..."
           className="input-text-box"
           value={searchInput}
