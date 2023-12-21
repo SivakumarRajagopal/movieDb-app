@@ -7,3 +7,26 @@
 .page-title {
   text-align: center;
 }
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-btn {
+  border: none;
+  background-color: blue;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.current-page-no {
+  margin-left: 1rem;
+}

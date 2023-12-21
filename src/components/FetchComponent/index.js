@@ -23,6 +23,16 @@ const FetchComponent = props => {
     errorMsg: null,
   })
 
+  const [pageNo, setPageNo] = useState(1)
+
+  const handlePrevPageBtn = () => {
+    setPageNo(prev => (parseInt(prev) !== 1 ? parseInt(prev) - 1 : 1))
+  }
+
+  const handleNextPageBtn = () => {
+    setPageNo(prev => parseInt(prev) + 1)
+  }
+
   useEffect(() => {
     const getPopularData = async () => {
       setApiResponse(prevApiResponse => ({
@@ -30,8 +40,12 @@ const FetchComponent = props => {
         status: apiStatusConstants.inProgress,
       }))
 
+      const newUrl = url.concat(pageNo)
+      console.log(newUrl)
+
       //   const url = `https://api.themoviedb.org/3/movie/popular?api_key=cc8b4da86102dbe023605d3cfe6d65c1&language=en-US&page=1`
-      const response = await fetch(url)
+      const response = await fetch(newUrl)
+      console.log(response)
 
       const responseData = await response.json()
       if (response.ok) {
@@ -48,9 +62,8 @@ const FetchComponent = props => {
         }))
       }
     }
-
     getPopularData()
-  }, [url])
+  }, [pageNo, url])
 
   const renderSuccessView = () => {
     const {data} = apiResponse
@@ -72,7 +85,28 @@ const FetchComponent = props => {
       voteCount: eachItem.vote_count,
     }))
 
-    return <CardDisplay formattedData={formattedData} />
+    return (
+      <>
+        <CardDisplay formattedData={formattedData} />
+        <div className="pagination-container">
+          <button
+            type="button"
+            className="pagination-btn"
+            onClick={handlePrevPageBtn}
+          >
+            Prev
+          </button>
+          <p className="current-page-no">{pageNo}</p>
+          <button
+            type="button"
+            className="pagination-btn"
+            onClick={handleNextPageBtn}
+          >
+            Next
+          </button>
+        </div>
+      </>
+    )
   }
 
   const renderFailureView = () => {
