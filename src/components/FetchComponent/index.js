@@ -88,23 +88,6 @@ const FetchComponent = props => {
     return (
       <>
         <CardDisplay formattedData={formattedData} />
-        <div className="pagination-container">
-          <button
-            type="button"
-            className="pagination-btn"
-            onClick={handlePrevPageBtn}
-          >
-            Prev
-          </button>
-          <p className="current-page-no">{pageNo}</p>
-          <button
-            type="button"
-            className="pagination-btn"
-            onClick={handleNextPageBtn}
-          >
-            Next
-          </button>
-        </div>
       </>
     )
   }
@@ -137,6 +120,23 @@ const FetchComponent = props => {
       <div className="page-content-container">
         <h1 className="page-title">{heading}</h1>
         {renderPopularPage()}
+        <div className="pagination-container">
+          <button
+            type="button"
+            className="pagination-btn"
+            onClick={handlePrevPageBtn}
+          >
+            Prev
+          </button>
+          <p className="current-page-no">{pageNo}</p>
+          <button
+            type="button"
+            className="pagination-btn"
+            onClick={handleNextPageBtn}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ const EachCard = props => {
   const {eachItemDetails} = props
   const {id, title, posterPath, voteAverage} = eachItemDetails
 
-  const posterImgUrl = `https://image.tmdb.org/t/p/original${posterPath}`
+  const posterImgUrl = `https://image.tmdb.org/t/p/w500${posterPath}`
 
   return (
     <li className="cardItem">
